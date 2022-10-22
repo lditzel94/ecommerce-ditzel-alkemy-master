@@ -1,9 +1,9 @@
-import { Menu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
-import EllipsisVertical from "../../utils/svg/EllipsisVertical";
+import { Menu, Transition } from '@headlessui/react'
+import { Fragment } from 'react'
+import EllipsisVertical from '../../utils/svg/EllipsisVertical'
 
-import { filterButtons } from "../../components/Filter/FilterButton";
-import FilterItem from "../../components/Filter/FilterItem";
+import { filterButtons } from '../../components/Filter/FilterButton'
+import FilterItem from '../../components/Filter/FilterItem'
 
 export function FilterDropdown() {
   return (
@@ -17,7 +17,7 @@ export function FilterDropdown() {
           Categorias
         </Menu.Button>
         <Transition
-          as={Fragment}
+          as={ Fragment }
           enter="transition ease-out duration-100"
           enterFrom="transform opacity-0 scale-95"
           enterTo="transform opacity-100 scale-100"
@@ -28,22 +28,22 @@ export function FilterDropdown() {
           <Menu.Items className="absolute w-screen origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="px-1 py-1">
               <Menu.Item>
-                {({ active }) => (
+                { ( { active } ) => (
                   <>
                     <div className="text-xl text-start">
                       <div className="w-80 p-5 mx-auto">
-                        {filterButtons?.map((item, index) => (
-                          <FilterItem key={item + index} item={item} />
-                        ))}
+                        { filterButtons?.map( ( item, index ) => (
+                          <FilterItem key={ item + index } item={ item } />
+                        ) ) }
                       </div>
                     </div>
                   </>
-                )}
+                ) }
               </Menu.Item>
             </div>
           </Menu.Items>
         </Transition>
       </Menu>
     </>
-  );
+  )
 }

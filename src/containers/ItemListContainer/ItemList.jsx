@@ -1,24 +1,24 @@
-import { createContext, memo, useContext, useState } from "react";
-import { FilterDropdown } from "../../components/Filter/FilterDropdown";
+import { createContext, memo, useContext, useState } from 'react'
+import { FilterDropdown } from '../../components/Filter/FilterDropdown'
 
-import Item from "./Item";
-import { filterButtons } from "../../components/Filter/FilterButton";
-import FilterItem from "../../components/Filter/FilterItem";
-import Carousel from "../../components/Carousel/Carousel";
+import Item from './Item'
+import { filterButtons } from '../../components/Filter/FilterButton'
+import FilterItem from '../../components/Filter/FilterItem'
+import Carousel from '../../components/Carousel/Carousel'
 
-const images = ["banner5.jpg", "banner6.jpg", "banner7.jpg", "banner8.jpg"];
+const images = [ 'banner5.jpg', 'banner6.jpg', 'banner7.jpg', 'banner8.jpg' ]
 
-const FilterContext = createContext([]);
-export const useFilterContext = () => useContext(FilterContext);
+const FilterContext = createContext( [] )
+export const useFilterContext = () => useContext( FilterContext )
 
-const ItemList = memo(({ items = [] }) => {
-  const [data, setData] = useState(items);
-  const [isFilter, setIsFilter] = useState(data);
+const ItemList = memo( ( { items = [] } ) => {
+  const [ data, setData ] = useState( items )
+  const [ isFilter, setIsFilter ] = useState( data )
 
   //   const handleClick = () => {};
 
   return (
-    <FilterContext.Provider value={{ data, setData, isFilter, setIsFilter }}>
+    <FilterContext.Provider value={ { data, setData, isFilter, setIsFilter } }>
       <div className="md:hidden">
         <FilterDropdown />
       </div>
@@ -31,7 +31,7 @@ const ItemList = memo(({ items = [] }) => {
             </span>
           </p>
         </button>
-      </div> */}
+      </div> */ }
       <div className="flex justify-center sm:mx-10">
         <div className="text-xl text-start hidden md:block w-96">
           <div className="my-10 bg-white">
@@ -41,21 +41,21 @@ const ItemList = memo(({ items = [] }) => {
                   Categorias
                 </h1>
               </div>
-              {filterButtons?.map((item) => (
-                <FilterItem item={item} />
-              ))}
+              { filterButtons?.map( ( item ) => (
+                <FilterItem item={ item } />
+              ) ) }
             </div>
           </div>
-          <Carousel images={images} />
+          <Carousel images={ images } />
         </div>
         <div className="mt-5">
-          {data?.map((item) => (
-            <Item item={item} />
-          ))}
+          { data?.map( ( item ) => (
+            <Item item={ item } />
+          ) ) }
         </div>
       </div>
     </FilterContext.Provider>
-  );
-});
+  )
+} )
 
-export default ItemList;
+export default ItemList

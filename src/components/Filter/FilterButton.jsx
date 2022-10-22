@@ -1,93 +1,93 @@
 export const filterButtons = [
   {
-    name: "Notebooks y PCs",
+    name: 'Notebooks y PCs',
     items: [
       {
         isChecked: true,
-        name: "Notebook",
+        name: 'Notebook',
       },
       {
         isChecked: true,
-        name: "Pc",
+        name: 'Pc',
       },
     ],
   },
   {
-    name: "Placas de video",
+    name: 'Placas de video',
     items: [
       {
         isChecked: true,
-        name: "Nvidia",
+        name: 'Nvidia',
       },
       {
         isChecked: true,
-        name: "Radeon",
+        name: 'Radeon',
       },
     ],
   },
   {
-    name: "Procesadores",
+    name: 'Procesadores',
     items: [
       {
         isChecked: true,
-        name: "Intel",
+        name: 'Intel',
       },
       {
         isChecked: true,
-        name: "AMD",
+        name: 'AMD',
       },
     ],
   },
   {
-    name: "Mothers",
+    name: 'Mothers',
     items: [
       {
         isChecked: true,
-        name: "Mother Intel",
+        name: 'Mother Intel',
       },
       {
         isChecked: true,
-        name: "Mother AMD",
+        name: 'Mother AMD',
       },
     ],
   },
   {
-    name: "Almacenamiento",
+    name: 'Almacenamiento',
     items: [
       {
         isChecked: true,
-        name: "Discos Rigidos",
+        name: 'Discos Rigidos',
       },
       {
         isChecked: true,
-        name: "Discos Solidos",
+        name: 'Discos Solidos',
       },
     ],
   },
   {
-    name: "Memorias Ram",
+    name: 'Memorias Ram',
     items: [
       {
         isChecked: true,
-        name: "Memoria de 8gb",
+        name: 'Memoria de 8gb',
       },
       {
         isChecked: true,
-        name: "Memoria de 16gb",
+        name: 'Memoria de 16gb',
       },
     ],
   },
   {
-    name: "Teclados y mouses",
+    name: 'Teclados y mouses',
     items: [
       {
         isChecked: true,
-        name: "Teclados",
+        name: 'Teclados',
       },
       {
         isChecked: true,
-        name: "Mouses",
+        name: 'Mouses',
       },
     ],
   },
-];
+]

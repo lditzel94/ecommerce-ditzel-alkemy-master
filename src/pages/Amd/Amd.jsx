@@ -1,7 +1,7 @@
-import React from "react";
-import PanelHardware from "../../components/PanelHardware/PanelHardware";
-import ItemBuilContainer from "../../containers/ItemBuildContainer/ItemBuildContainer";
-import { Link } from "react-router-dom";
+import React from 'react'
+import PanelHardware from '../../components/PanelHardware/PanelHardware'
+import ItemBuilContainer from '../../containers/ItemBuildContainer/ItemBuildContainer'
+import { Link } from 'react-router-dom'
 
 const Amd = () => {
   return (
@@ -25,7 +25,7 @@ const Amd = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Amd;
+export default Amd

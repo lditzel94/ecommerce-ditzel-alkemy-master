@@ -1,8 +1,8 @@
-import { ArrowLeftIcon } from "@heroicons/react/outline";
-import { Link } from "react-router-dom";
-import Accordion from "../../components/Accordion/Accordion";
+import { ArrowLeftIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom'
+import Accordion from '../../components/Accordion/Accordion'
 
-import "./Help.css";
+import './Help.css'
 
 const Help = () => {
   return (
@@ -21,7 +21,7 @@ const Help = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Help;
+export default Help

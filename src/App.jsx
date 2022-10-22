@@ -1,26 +1,26 @@
-import "./App.css";
-import { Route, Routes } from "react-router-dom";
-import { lazy, Suspense } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
-import Products from "./pages/Products/Products";
-import { Footer } from "./components/Footer/Footer";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Home } from "./pages/Home/Home";
-import Spinner from "./components/Spinner/Spinner";
-import ItemDetailContainer from "./containers/ItemDetailContainer/ItemDetailContainer";
-import Help from "./pages/Help/Help";
-import Amd from "./pages/Amd/Amd";
-import MotherAMD from "./pages/Amd/MotherAMD";
-import Intel from "./pages/Intel/Intel";
-import Placa from "./pages/Amd/Placa";
-import Cooler from "./pages/Amd/Cooler";
-import Memoriaram from "./pages/Amd/Memoriaram";
-import Disco from "./pages/Amd/Disco";
-import Gabinete from "./pages/Amd/Gabinete";
-import Monitor from "./pages/Amd/Monitor";
+import Products from './pages/Products/Products'
+import { Footer } from './components/Footer/Footer'
+import { Navbar } from './components/Navbar/Navbar'
+import { Home } from './pages/Home/Home'
+import Spinner from './components/Spinner/Spinner'
+import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer'
+import Help from './pages/Help/Help'
+import Amd from './pages/Amd/Amd'
+import MotherAMD from './pages/Amd/MotherAMD'
+import Intel from './pages/Intel/Intel'
+import Placa from './pages/Amd/Placa'
+import Cooler from './pages/Amd/Cooler'
+import Memoriaram from './pages/Amd/Memoriaram'
+import Disco from './pages/Amd/Disco'
+import Gabinete from './pages/Amd/Gabinete'
+import Monitor from './pages/Amd/Monitor'
 
-const Error404 = lazy(() => import("./pages/Error404/Error404"));
+const Error404 = lazy( () => import('./pages/Error404/Error404') )
 
 const pageTransition = {
   in: {
@@ -29,7 +29,7 @@ const pageTransition = {
   out: {
     opacity: 0,
   },
-};
+}
 
 function App() {
 
@@ -46,7 +46,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Home />
               </motion.div>
@@ -61,7 +61,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Products />
               </motion.div>
@@ -76,7 +76,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Amd />
               </motion.div>
@@ -91,7 +91,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <MotherAMD />
               </motion.div>
@@ -106,7 +106,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Cooler />
               </motion.div>
@@ -121,7 +121,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Memoriaram />
               </motion.div>
@@ -136,7 +136,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Placa />
               </motion.div>
@@ -151,7 +151,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Disco />
               </motion.div>
@@ -166,7 +166,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Gabinete />
               </motion.div>
@@ -181,7 +181,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Monitor />
               </motion.div>
@@ -196,7 +196,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Intel />
               </motion.div>
@@ -211,7 +211,7 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
                 <Help />
               </motion.div>
@@ -226,9 +226,9 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
-                <Suspense fallback={<Spinner />}>
+                <Suspense fallback={ <Spinner /> }>
                   <ItemDetailContainer />
                 </Suspense>
               </motion.div>
@@ -243,10 +243,10 @@ function App() {
                 initial="out"
                 animate="in"
                 exit="out"
-                variants={pageTransition}
+                variants={ pageTransition }
               >
-                <Suspense fallback={<>...</>}>
-                  <Error404 />{" "}
+                <Suspense fallback={ <>...</> }>
+                  <Error404 />{ ' ' }
                 </Suspense>
               </motion.div>
             }
@@ -256,7 +256,7 @@ function App() {
 
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

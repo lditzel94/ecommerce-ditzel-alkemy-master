@@ -1,4 +1,4 @@
-import Logo from "../../assets/imgs/logo.png";
+import Logo from '../../assets/imgs/logo.png'
 
 export function Footer() {
   return (
@@ -6,7 +6,7 @@ export function Footer() {
       <footer className="p-4 bg-gray-700 sm:p-6 mt-24">
         <div className="md:flex md:justify-evenly">
           <div className="mb-6 md:mb-0">
-            <img src={Logo} className="mr-3 h-32" alt="Computer Store Logo" />
+            <img src={ Logo } className="mr-3 h-32" alt="Computer Store Logo" />
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2 mt-5">
             <div>
@@ -125,5 +125,5 @@ export function Footer() {
         </div>
       </footer>
     </>
-  );
+  )
 }

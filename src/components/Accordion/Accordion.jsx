@@ -1,27 +1,23 @@
-import { useState, Fragment } from "react";
-import {
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
-} from "@material-tailwind/react";
+import { Fragment, useState } from 'react'
+import { Accordion, AccordionBody, AccordionHeader, } from '@material-tailwind/react'
 
 export default function Example() {
-  const [open, setOpen] = useState(0);
+  const [ open, setOpen ] = useState( 0 )
 
-  const handleOpen = (value) => {
-    setOpen(open === value ? 0 : value);
-  };
+  const handleOpen = ( value ) => {
+    setOpen( open === value ? 0 : value )
+  }
 
   const customAnimation = {
     mount: { scale: 1 },
     unmount: { scale: 0.9 },
-  };
+  }
 
   return (
     <Fragment>
-      <Accordion open={open === 1} animate={customAnimation}>
+      <Accordion open={ open === 1 } animate={ customAnimation }>
         <AccordionHeader
-          onClick={() => handleOpen(1)}
+          onClick={ () => handleOpen( 1 ) }
           className="font-normal my-3 text-sky-900"
         >
           What is Material Tailwind?
@@ -35,10 +31,10 @@ export default function Example() {
           </div>
         </AccordionBody>
       </Accordion>
-      {/* <hr className="border-1 border-gray-300"></hr> */}
-      <Accordion open={open === 2} animate={customAnimation}>
+      {/* <hr className="border-1 border-gray-300"></hr> */ }
+      <Accordion open={ open === 2 } animate={ customAnimation }>
         <AccordionHeader
-          onClick={() => handleOpen(2)}
+          onClick={ () => handleOpen( 2 ) }
           className="font-normal my-3"
         >
           How to use Material Tailwind?
@@ -52,10 +48,10 @@ export default function Example() {
           </div>
         </AccordionBody>
       </Accordion>
-      {/* <hr className="border-1 border-gray-300"></hr> */}
-      <Accordion open={open === 3} animate={customAnimation}>
+      {/* <hr className="border-1 border-gray-300"></hr> */ }
+      <Accordion open={ open === 3 } animate={ customAnimation }>
         <AccordionHeader
-          onClick={() => handleOpen(3)}
+          onClick={ () => handleOpen( 3 ) }
           className="font-normal my-3"
         >
           What can I do with Material Tailwind?
@@ -69,10 +65,10 @@ export default function Example() {
           </div>
         </AccordionBody>
       </Accordion>
-      {/* <hr className="border-1 border-gray-300"></hr> */}
-      <Accordion open={open === 4} animate={customAnimation}>
+      {/* <hr className="border-1 border-gray-300"></hr> */ }
+      <Accordion open={ open === 4 } animate={ customAnimation }>
         <AccordionHeader
-          onClick={() => handleOpen(4)}
+          onClick={ () => handleOpen( 4 ) }
           className="font-normal my-3"
         >
           What can I do with Material Tailwind?
@@ -86,10 +82,10 @@ export default function Example() {
           </div>
         </AccordionBody>
       </Accordion>
-      {/* <hr className="border-1 border-gray-300"></hr> */}
-      <Accordion open={open === 5} animate={customAnimation}>
+      {/* <hr className="border-1 border-gray-300"></hr> */ }
+      <Accordion open={ open === 5 } animate={ customAnimation }>
         <AccordionHeader
-          onClick={() => handleOpen(5)}
+          onClick={ () => handleOpen( 5 ) }
           className="font-normal my-3"
         >
           What can I do with Material Tailwind?
@@ -104,5 +100,5 @@ export default function Example() {
         </AccordionBody>
       </Accordion>
     </Fragment>
-  );
+  )
 }

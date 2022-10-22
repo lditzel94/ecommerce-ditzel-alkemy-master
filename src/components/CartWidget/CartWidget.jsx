@@ -1,34 +1,34 @@
-import { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import { XIcon } from "@heroicons/react/outline";
+import { Fragment, useState } from 'react'
+import { Dialog, Transition } from '@headlessui/react'
+import { XIcon } from '@heroicons/react/outline'
 
-import CartList from "./CartList";
-import CartItem from "./CartItem";
-import logo from "../../assets/imgs/logo.png";
+import CartList from './CartList'
+import CartItem from './CartItem'
+import logo from '../../assets/imgs/logo.png'
 
-export function CartWidget({ children }) {
-  const [open, setOpen] = useState(false);
+export function CartWidget( { children } ) {
+  const [ open, setOpen ] = useState( false )
 
   const changeBool = () => {
-    setOpen(!open);
-  };
+    setOpen( !open )
+  }
 
   return (
     <>
       <button
         type="button"
         className="rounded-full text-white focus:outline-none"
-        onClick={changeBool}
+        onClick={ changeBool }
       >
-        {children}
+        { children }
         <span className="sr-only">View notifications</span>
         <div className="flex"></div>
       </button>
 
-      <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={setOpen}>
+      <Transition.Root show={ open } as={ Fragment }>
+        <Dialog as="div" className="relative z-10" onClose={ setOpen }>
           <Transition.Child
-            as={Fragment}
+            as={ Fragment }
             enter="ease-in-out duration-500"
             enterFrom="opacity-0"
             enterTo="opacity-100"
@@ -43,7 +43,7 @@ export function CartWidget({ children }) {
             <div className="absolute inset-0 overflow-hidden">
               <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
                 <Transition.Child
-                  as={Fragment}
+                  as={ Fragment }
                   enter="transform transition ease-in-out duration-500 sm:duration-700"
                   enterFrom="translate-x-full"
                   enterTo="translate-x-0"
@@ -56,18 +56,18 @@ export function CartWidget({ children }) {
                       <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
                         <div className="flex items-start justify-between">
                           <Dialog.Title className="text-lg font-medium text-gray-900">
-                            {" "}
+                            { ' ' }
                             <img
-                              src={logo}
+                              src={ logo }
                               alt="logo"
                               className="h-20 w-20"
-                            />{" "}
+                            />{ ' ' }
                           </Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
                               className="-m-2 p-2 mt-12 text-gray-400 hover:text-gray-500"
-                              onClick={() => setOpen(false)}
+                              onClick={ () => setOpen( false ) }
                             >
                               <span className="sr-only">Close panel</span>
                               <XIcon className="h-6 w-6" aria-hidden="true" />
@@ -77,11 +77,11 @@ export function CartWidget({ children }) {
 
                         <div className="mt-8">
                           <div className="flow-root">
-                            <CartList onClick={() => setOpen(false)} />
+                            <CartList onClick={ () => setOpen( false ) } />
                           </div>
                         </div>
                       </div>
-                      <CartItem onClick={() => setOpen(false)} />
+                      <CartItem onClick={ () => setOpen( false ) } />
                     </div>
                   </Dialog.Panel>
                 </Transition.Child>
@@ -91,5 +91,5 @@ export function CartWidget({ children }) {
         </Dialog>
       </Transition.Root>
     </>
-  );
+  )
 }

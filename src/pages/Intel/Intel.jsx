@@ -1,5 +1,5 @@
-import React from "react";
-import PanelHardware from "../../components/PanelHardware/PanelHardware";
+import React from 'react'
+import PanelHardware from '../../components/PanelHardware/PanelHardware'
 
 const Intel = () => {
   return (
@@ -7,7 +7,7 @@ const Intel = () => {
       <PanelHardware />
       <div>Intel</div>
     </>
-  );
-};
+  )
+}
 
-export default Intel;
+export default Intel

@@ -1,9 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
-import PanelHardware from "../../components/PanelHardware/PanelHardware";
-import ItemBuilContainer from "../../containers/ItemBuildContainer/ItemBuildContainer";
+import { Link, useNavigate } from 'react-router-dom'
+import PanelHardware from '../../components/PanelHardware/PanelHardware'
+import ItemBuilContainer from '../../containers/ItemBuildContainer/ItemBuildContainer'
 
 const Gabinete = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <>
@@ -12,7 +12,7 @@ const Gabinete = () => {
           <PanelHardware />
           <div className="flex space-x-5 justify-center mt-5">
             <button
-              onClick={() => navigate(-1)}
+              onClick={ () => navigate( -1 ) }
               className="bg-sky-900 rounded py-2 px-4 text-white"
             >
               Volver atrás
@@ -32,7 +32,7 @@ const Gabinete = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Gabinete;
+export default Gabinete
